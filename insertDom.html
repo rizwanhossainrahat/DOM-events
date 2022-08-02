@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Explore dom</title>
+</head>
+<style>
+    article{
+        border: 5px solid tomato;
+        border-radius: 10px;
+    }
+</style>
+<body>
+     <!-- DOM=documnet object model ...jeta html k akta document object  hishabe convert kore jate pore ata change kora jai  -->
+    <h1>explore dom</h1>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <h1>dom</h1>
+    <p id="second">Lorem ipsum dolor sit amet.</p>
+    <article id="first-article" >
+        <h3 class="author">author-1</h3>
+        <p>this is article</p>
+    </article>
+    <article class="speacial" >
+        <h3 >author-2</h3>
+        <p>this is article</p>
+    </article>
+    <article >
+        <h3 class="author">author-3</h3>
+        <p>this is article</p>
+    </article>
+    <article>
+        <ul id="list"> 
+            <li>gift-1</li>
+            <li>gift-2</li>
+            <li>gift-3</li>
+        </ul>
+    </article>
+
+    
+</body>
+
+<script>
+  var article= document.getElementById('first-article');
+  var newParagrap=document.createElement('p');
+  newParagrap.innerHTML='this javascript created paragrap';
+  article.appendChild(newParagrap);
+
+//   add another gift list
+   var ul=document.getElementById('list');
+   var li=document.createElement('li');
+   li.innerHTML='gift-4';
+   ul.appendChild(li);
+
+   
+    
+
+</script>
+
+
+
+</html>
